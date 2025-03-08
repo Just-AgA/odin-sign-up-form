@@ -1,7 +1,13 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: sans-serif, system-ui, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue';
 }
 
 .wrapper {
@@ -14,6 +20,7 @@
     background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .form {
@@ -40,9 +47,12 @@
     padding-left: 25px;
     padding-top: 12px;
     padding-bottom: 14px;
-    box-shadow: 0 1px 2px 0 rgb(228, 223, 223);
+    box-shadow: 0 2px 2px 0 rgb(228, 223, 223);
     width: 100%;
-    margin-right: -25px;
+}
+
+form {
+    margin-right: -24px;
 }
 
 button {
@@ -60,8 +70,46 @@ button {
     margin-bottom: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
+}
+
+.background-image div {
+    background-color: #596D48;
+    background: rgb(0 0 0 / 40%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top: 180px;
+    padding: 10px;
+}
+
 label {
     display: block;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    box-shadow: 1px 1px 2px -1px rgb(228, 223, 223);
+    padding: 6px;
+    border-radius: 4px;
+}
+
+input[type]:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 2px 2px 5px -1px rgb(87, 144, 177);
+}
+
+input[type=password]:invalid {
+    outline: none !important;
+    border: 1px solid red;
 }
 
 .name-lastname div, .email-tel div, .password div {
@@ -72,4 +120,22 @@ label {
 .name-lastname, .email-tel, .password {
     display: flex;
     justify-content: flex-start;
+}
+
+.title {
+    font-family: Norse-Bold, sans-serif;
+}
+
+.credits {
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.credits a {
+    text-decoration: underline;
+    color: white;
+    font-weight: 500;
 }
